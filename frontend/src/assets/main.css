@@ -1,35 +1,110 @@
-@import './base.css';
-
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	font-family: system-ui, sans-serif;
+	font-size: small;
+	font-weight: normal;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+body {
+	background-color: #f1f1f1;
+	padding: 2rem;
+	margin: 0;
 }
+
+h1 {
+	background-color: cadetblue;
+	padding: 1.5rem 1.75rem;
+	border: 0.2rem solid burlywood;
+	border-radius: 0.5rem;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+	color: #007BFF;
+}
+
+a:visited {
+	color: inherit;
+}
+
 
 @media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+a:hover {
+	background-color: hsla(160, 100%, 37%, 0.2);
 }
-/* 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-} */
+.recipeitem {
+	background-color: white;
+	margin: 1rem;
+	padding: 0.8rem;
+	border: 0.1rem;
+	border-radius: 0.5rem;
+}
+
+.title {
+	font-weight:bold;
+	font-size: 1rem;
+	padding: 0;
+}
+
+.author {
+	font-size: 0.5rem;
+}
+
+.description {
+	margin: 1rem;
+}
+
+/* Pagination container */
+.pagination {
+	background-color: lightgray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	margin-top: 2rem;
+	padding: 0.5rem;
+}
+
+/* Page buttons */
+.next-page {
+	padding: 0.5rem 0.75rem;
+	border: 1px solid dimgray;
+	border-radius: 0.5rem;
+	background-color: white;
+	color: dimgray;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.next-page.active {
+	background-color: rgb(117, 117, 240);
+	color: whitesmoke;
+	pointer-events: none;
+	opacity: 0.6;
+}
+
+.page-btn:hover:not(:disabled) {
+	background-color: whitesmoke;
+}
+
+.page-btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* Active page */
+.page-btn.active {
+	background-color: lightskyblue;
+	border-color: lightskyblue;
+	color: white;
+}
