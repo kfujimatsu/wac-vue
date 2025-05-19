@@ -40,8 +40,11 @@ class RecipeFactory extends Factory
             'name' => array_rand($ingredients, 5),
             'slug' => 'random-slug-here', // todo:: create a unique slug from name
             'description' => 'test description will create seeder',
-            'ingredients' => array_rand($ingredients, 15),  // todo:: join with author Table fk author_id
-            'author' => array_rand($author, 1),
+            'ingredients' => [],
+            'recipe_steps' => [],
+            'author_email' => array_rand($author, 1),
+            'created_at' => time(),
+            'updated_at' => time(),
         ];
     }
 }

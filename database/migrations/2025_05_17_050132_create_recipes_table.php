@@ -17,8 +17,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug')->unique();
             $table->text('description');
-            $table->text('ingredient');  // todo join with author Table fk author_id
-            $table->string('author'); 
+            $table->json('ingredient');  // todo join with author Table fk author_id
+            $table->json('recipe_steps'); 
+            $table->string('author_email'); 
             $table->timestamps();
         });
     }

@@ -17,8 +17,10 @@ class Recipe extends Model
         'name',
         'slug',
         'description',
-        'author', 
-        'ingredients',  
+        'author',
+        'ingredients',
+        'steps',
+        'updated_at'
     ];
 
     /**
